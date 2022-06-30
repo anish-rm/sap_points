@@ -217,10 +217,54 @@ func main() {
 			grand_total = grand_total + total[3]
 		case 5:
 			fmt.Println("----- ONLINE COURCES -----")
-			fmt.Println("fill ur code here")
+			var course_count[4]int
+			course_pts:=[4]int{5,10,20,30}					   
+			fmt.Print("VALUE ADDED COURSE: ")
+			fmt.Scan(&course_count[0])
+			fmt.Print("ONE CREDIT COURSES:")
+			fmt.Scan(&course_count[1])
+			fmt.Print("TWO CREDIT COURSES:")
+			fmt.Scan(&course_count[2])
+			fmt.Print("MORE THAN TWO CREDIT COURSES:")
+			fmt.Scan(&course_count[3])
+			for j :=3; j >= 0; j-- {
+				for k:=course_count[j];k>0;k-- {
+					total[4]=total[4]+course_pts[j]
+					if(total[4]>100){
+						total[4]=total[4]-course_pts[j]
+				}
+			}
+		}
+		grand_total=grand_total+total[4]
 		case 6:
-			fmt.Println("----- SPORTS -----")
-			fmt.Println("fill ur code here")
+			var sports_count[8]int
+			sports_pts:=[8]int{2,10,20,50,5,20,40,100}
+			fmt.Println("----- SPORTS AND GAMES -----")
+			fmt.Print("No.of INSIDE PARTICIPATION : ")
+			fmt.Scan(&sports_count[0])
+			fmt.Print("No.of ZONE/OUTSIDE PARTICIPATION : ")
+			fmt.Scan(&sports_count[1])
+			fmt.Print("No.of STATE/INTER LEVEL PARTICIPATION : ")
+			fmt.Scan(&sports_count[2])
+			fmt.Print("No.of NATIONAL/INTERNATIONAL LEVEL PARTICIPATION : ")
+			fmt.Scan(&sports_count[3])
+			fmt.Print("No.of INSIDE PRIZES : ")
+			fmt.Scan(&sports_count[4])
+			fmt.Print("No.of ZONE/OUTSIDE PRIZES : ")
+			fmt.Scan(&sports_count[5])
+			fmt.Print("No.of STATE/INTER LEVEL PRIZES : ")
+			fmt.Scan(&sports_count[6])
+			fmt.Print("No.of NATIONAL/INTERNATIONAL LEVEL PRIZES : ")
+			fmt.Scan(&sports_count[7])
+			for j :=7; j >= 0; j-- {
+				for k:=sports_count[j];k>0;k-- {
+					total[5]=total[5]+sports_pts[j]
+					if(total[5]>100){
+						total[5]=total[5]-sports_pts[j]
+				}
+			}
+		}
+		grand_total=grand_total+total[5]
 		case 7:
 			fmt.Println("----- MEMBERSHIP -----")
 			fmt.Println("fill ur code here")
