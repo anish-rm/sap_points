@@ -7,8 +7,8 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println("--------------------------- Welcome to SAP Point Calculation -----------------------")
 		fmt.Println("Choose what you want to calculate")
-		fmt.Println("1.Paper Presentation")
-		fmt.Println("2.Project Presentation")
+		fmt.Println("1.Paper Presentations")
+		fmt.Println("2.Project Presentations")
 		fmt.Println("3.Techno Managerial Events")
 		fmt.Println("4.Social Activities")
 		fmt.Println("5.Online Courses")
@@ -229,7 +229,15 @@ func main() {
 			fmt.Println("fill ur code here")
 		case 9:
 			fmt.Println("----- CALCULATE SAP -----")
-			fmt.Println("STUDENT ACTIVITY POINTS SCORED = ", grand_total)
+			fmt.Println(" Paper Presentations      : ",total[0])
+			fmt.Println(" Project Presentations    : ",total[1])
+			fmt.Println(" Techno Managerial Events : ",total[2])
+			fmt.Println(" Social Activities        : ",total[3])
+			fmt.Println(" Online Courses           : ",total[4])
+			fmt.Println(" Sports                   : ",total[5])
+			fmt.Println(" Membership               : ",total[6])
+			fmt.Println(" Entrepreneurship         : ",total[7])
+			fmt.Println("-- STUDENT ACTIVITY POINTS SCORED = ", grand_total," --")
 			// UNABLE TO GET grand_total!!!! after calculating Techno & social activities
 		case 10:
 			fmt.Println("------------------------------------Exiting-----------------------------------------------------")
