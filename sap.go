@@ -267,10 +267,44 @@ func main() {
 		grand_total=grand_total+total[5]
 		case 7:
 			fmt.Println("----- MEMBERSHIP -----")
-			fmt.Println("fill ur code here")
+			var membership_count [3]int
+			membership_pts := [3]int{20, 5, 2}
+			fmt.Print("NCC&NSS: ")
+			fmt.Scan(&membership_count[0])
+			fmt.Print("Proffessional Society : ")
+			fmt.Scan(&membership_count[1])
+			fmt.Print("Clubs:")
+			fmt.Scan(&membership_count[2])
+			for j := 2; j >= 0; j-- {
+				for k := membership_count[j]; k > 0; k-- {
+					total[6] = total[6] + membership_pts[j]
+					if total[6] > 50 {
+						total[6] = total[6] - membership_pts[j]
+					}
+				}
+			}
+			grand_total = grand_total + total[6]
+			
 		case 8:
 			fmt.Println("----- ENTERPRENEURSHIP -----")
-			fmt.Println("fill ur code here")
+			var entrepreneurship_count [3]int
+			entrepreneurship_pts := [3]int{10, 50, 100}
+			fmt.Print("No.of workshop attended" )
+			fmt.Scan(&entrepreneurship_count[0])
+			fmt.Print("Registered for startup: ")
+			fmt.Scan(&entrepreneurship_count[1])
+			fmt.Print("Product Released:")
+			fmt.Scan(&entrepreneurship_count[2])
+			for j := 2; j >= 0; j-- {
+				for k := entrepreneurship_count[j]; k > 0; k-- {
+					total[7] = total[7] + entrepreneurship_pts[j]
+					if (total[7] > 100) {
+						total[7] = total[7] - entrepreneurship_pts[j]
+					}
+				}
+			}
+			grand_total = grand_total + total[7]
+			
 		case 9:
 			fmt.Println("----- CALCULATE SAP -----")
 			fmt.Println(" Paper Presentations      : ",total[0])
